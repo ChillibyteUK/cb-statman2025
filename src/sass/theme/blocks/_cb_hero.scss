@@ -1,0 +1,29 @@
+.hero {
+    background-color: var(--col-neutral-900);
+    color: var(--col-neutral-50);
+    height: calc(450px + var(--h-top));
+    min-height: calc(450px + var(--h-top));
+    padding-top: var(--h-top);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &__image-container {
+        overflow: hidden;
+    }
+    &__image {
+        min-height: 350px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__title {
+        font-size: var(--text-2xl);
+        font-weight: var(--fw-900);
+        padding-block-end: 0;
+    }
+    &__subtitle {
+        font-size: var(--text-lg);
+        font-weight: var(--fw-600);
+        padding-block-end: 0.5rem;
+        border-bottom: 1px solid hsl( var(--hsl-neutral-50) / 0.5);
+    }
+}
