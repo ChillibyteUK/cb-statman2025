@@ -55,16 +55,7 @@ get_header();
         <?php
         echo wp_kses_post( get_the_content() );
         ?>
-        <h2 class="text-center mt-5">Gallery</h2>
-        <p class="text-center">We'd love to see your photos of the event. Upload them here to add to our <a href="/gallery/">event gallery</a>.</p>
-        <?php
-        get_template_part( './page-templates/blocks/cb-foogallery' );
-        ?>
     </div>
-    <?php
-    get_template_part( './page-templates/blocks/cb-feedback-form' );
-    get_template_part( './page-templates/blocks/cb-contact' );
-    ?>
 </main>
 <?php
 get_footer();
