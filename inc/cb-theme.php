@@ -106,39 +106,39 @@ function widgets_init() {
         'editor-color-palette',
         array(
             array(
+                'name'  => 'Light',
+                'slug'  => 'light',
+                'color' => '#f2f2f2',
+            ),
+            array(
                 'name'  => 'Dark',
                 'slug'  => 'dark',
                 'color' => '#222222',
             ),
             array(
-                'name'  => 'Primary 900',
-                'slug'  => 'primary-900',
-                'color' => '#27383A',
-            ),
-            array(
-                'name'  => 'Primary 700',
-                'slug'  => 'primary-700',
-                'color' => '#2B5B54',
-            ),
-            array(
-                'name'  => 'Primary 500',
-                'slug'  => 'primary-500',
-                'color' => '#3D6557',
-            ),
-            array(
-                'name'  => 'Primary 300',
-                'slug'  => 'primary-300',
-                'color' => '#93B69F',
-            ),
-            array(
-                'name'  => 'Accent 400',
-                'slug'  => 'accent-400',
-                'color' => '#93B636',
-            ),
-            array(
-                'name'  => 'White',
-                'slug'  => 'white',
+                'name'  => 'Neutral 50',
+                'slug'  => 'neutral-50',
                 'color' => '#ffffff',
+            ),
+            array(
+                'name'  => 'Neutral 900',
+                'slug'  => 'neutral-900',
+                'color' => '#1F1F1F',
+            ),
+            array(
+                'name'  => 'Secondary 100',
+                'slug'  => 'secondary-100',
+                'color' => '#F9F8F6',
+            ),
+            array(
+                'name'  => 'Secondary 300',
+                'slug'  => 'secondary-300',
+                'color' => '#DADADA',
+            ),
+            array(
+                'name'  => 'Accent 500',
+                'slug'  => 'accent-500',
+                'color' => '#7b9fff',
             ),
         )
     );

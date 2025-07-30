@@ -22050,6 +22050,7 @@ header .dropdown.current-menu-item > .nav-link::after {
   aspect-ratio: 3/2;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 .latest_posts__image img {
   width: 100%;
@@ -22059,7 +22060,7 @@ header .dropdown.current-menu-item > .nav-link::after {
   transition: transform var(--transition);
 }
 .latest_posts__title {
-  padding: 1rem;
+  padding: 0 1rem 0.5rem 1rem;
 }
 
 body {
@@ -22130,19 +22131,12 @@ body {
 }
 
 .post_meta {
-  margin-bottom: 1rem;
+  padding-inline: 1rem;
+  padding-block-end: 0.5rem;
   display: flex;
   gap: 0.5rem;
-}
-.post_meta__author {
-  font-weight: var(--fw-600);
-  text-decoration: none;
-  color: var(--col-dark);
-}
-.post_meta__author:hover {
-  color: var(--col-accent-500);
-}
-.post_meta__date {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-500);
   color: var(--col-accent-500);
 }
 
