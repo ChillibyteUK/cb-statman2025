@@ -38,10 +38,11 @@ body {
 }
 
 .wp-block-group {
-    @extend .container;
-    background-color: var(--col-neutral-50);
-    & .container {
-        padding-inline: 0;
+    &:not(.alignfull) {
+        @extend .container;
+        & .container {
+            padding-inline: 0;
+        }
     }
 }
 .container .container {

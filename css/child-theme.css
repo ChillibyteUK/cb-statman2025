@@ -660,7 +660,7 @@ progress {
   color: #6c757d;
 }
 
-.container, .wp-block-group,
+.container, .wp-block-group:not(.alignfull),
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -677,27 +677,27 @@ progress {
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, .wp-block-group {
+  .container-sm, .container, .wp-block-group:not(.alignfull) {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, .wp-block-group {
+  .container-md, .container-sm, .container, .wp-block-group:not(.alignfull) {
     max-width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, .wp-block-group {
+  .container-lg, .container-md, .container-sm, .container, .wp-block-group:not(.alignfull) {
     max-width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-group {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-group:not(.alignfull) {
     max-width: 1170px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-group {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-group:not(.alignfull) {
     max-width: 1360px;
   }
 }
@@ -3786,7 +3786,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container, .navbar > .wp-block-group,
+.navbar > .container, .navbar > .wp-block-group:not(.alignfull),
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -22098,14 +22098,11 @@ body {
   color: var(--col-neutral-900);
 }
 
-.wp-block-group {
-  background-color: var(--col-neutral-50);
-}
-.wp-block-group .container, .wp-block-group .wp-block-group {
+.wp-block-group:not(.alignfull) .container, .wp-block-group:not(.alignfull) .wp-block-group:not(.alignfull) {
   padding-inline: 0;
 }
 
-.container .container, .wp-block-group .container, .container .wp-block-group, .wp-block-group .wp-block-group {
+.container .container, .wp-block-group:not(.alignfull) .container, .container .wp-block-group:not(.alignfull), .wp-block-group:not(.alignfull) .wp-block-group:not(.alignfull) {
   padding-inline: 0;
 }
 

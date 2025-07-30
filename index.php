@@ -11,11 +11,27 @@ $page_for_posts = get_option( 'page_for_posts' );
 
 get_header();
 ?>
-<main id="main" class="blog">
-    <div class="container pt-5">
-        <h1 class="insights-title mb-4">Podcasts</h1>
-        <div class="translucent_text__content"><?= wp_kses_post( get_the_content( null, false, $page_for_posts ) ); ?></div>
-    </div>
+<main id="main">
+	<section class="hero">
+		<div class="container h-100">
+			<div class="row h-100">
+				<div class="col-md-6 my-auto">
+					<h1 class="hero__title" data-aos="fade">News &amp; Advice</h1>
+					<p class="hero__subtitle" data-aos="fade">Insightful updates and straight-talking advice on property, deals, and strategy</p>
+				</div>
+				<div class="col-md-6 px-0 hero__image-container">
+					<?= get_the_post_thumbnail( 
+						$page_for_posts, 
+						'full', 
+						array(
+							'class'    => 'hero__image',
+							'data-aos' => 'zoom-out',
+						)
+					); ?>
+				</div>
+			</div>
+		</div>
+	</section>
     <section class="latest_insights">
         <div class="container pb-5">
             <div class="row g-4 w-100">
