@@ -36,7 +36,6 @@ defined( 'ABSPATH' ) || exit;
 							<div class="post_meta">
 								<span><i class="fa-regular fa-calendar"></i> <?= esc_html( get_the_date( 'jS F Y' ) ); ?></span>
 								<span><i class="fa-regular fa-clock"></i> <?= esc_html( estimate_reading_time_in_minutes( get_the_content() ) ); ?> minute read</span>
-
 							</div>
 							<h3 class="latest_posts__title"><?= esc_html( get_the_title() ); ?></h3>
 						</a>
