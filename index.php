@@ -20,14 +20,16 @@ get_header();
 					<p class="hero__subtitle" data-aos="fade">Insightful updates and straight-talking advice on property, deals, and strategy</p>
 				</div>
 				<div class="col-md-6 px-0 hero__image-container">
-					<?= get_the_post_thumbnail( 
-						$page_for_posts, 
-						'full', 
+					<?=
+					get_the_post_thumbnail(
+						$page_for_posts,
+						'full',
 						array(
 							'class'    => 'hero__image',
 							'data-aos' => 'zoom-out',
 						)
-					); ?>
+					);
+					?>
 				</div>
 			</div>
 		</div>
@@ -36,7 +38,7 @@ get_header();
         <div class="container pb-5">
             <div class="row g-4 w-100">
             <?php
-            // Custom query to include both published and scheduled posts
+            // Custom query to include both published and scheduled posts.
             $args = array(
                 'post_type'      => 'post',
                 'post_status'    => array( 'publish', 'future' ), // Include published and scheduled posts.
@@ -71,7 +73,7 @@ get_header();
                 echo '<p>No posts found.</p>';
             }
 
-            // Reset post data
+            // Reset post data.
             wp_reset_postdata();
             ?>
             </div>

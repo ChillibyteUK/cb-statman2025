@@ -47,7 +47,7 @@ get_header();
 			</div>
 			<div class="col-md-3">
 				<?php
-				// other posts
+				// other posts.
 				$q = new WP_Query(
 					array(
 						'post_type'      => 'post',
@@ -57,7 +57,7 @@ get_header();
 						'orderby'        => 'date',
 					)
 				);
-				if ( $q->have_posts() ) {	
+				if ( $q->have_posts() ) {
 					?>
 					<div class="sidebar">	
 						<h2 class="h3">Latest News &amp; Advice</h2>

@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 				$service_slug = sanitize_title( get_sub_field( 'service_name' ) );
 				?>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up">
-					<a class="service_cards__item" href="<?= esc_url( '/service/#' . $service_slug ); ?>">
+					<a class="service_cards__item" href="<?= esc_url( '/services/#' . $service_slug ); ?>">
 						<span class="service_cards__icon fa-stack fa-4x has-accent-500-color">
 							<i class="fa-solid fa-circle fa-stack-2x"></i>
 							<i class="fa-stack-1x fa-inverse <?= esc_attr( get_sub_field( 'glyph' ) ); ?>"></i>

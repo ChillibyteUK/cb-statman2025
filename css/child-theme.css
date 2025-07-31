@@ -22063,6 +22063,57 @@ header .dropdown.current-menu-item > .nav-link::after {
   padding: 0 1rem 0.5rem 1rem;
 }
 
+.icon_block__icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .icon_block__icon-container {
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+}
+.icon_block__icon {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--col-accent-500);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5rem;
+}
+@media (max-width: 991px) {
+  .icon_block__icon {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .icon_block__icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .icon_block__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+  }
+}
+.icon_block__title {
+  margin-bottom: 0.5rem;
+}
+.icon_block__content p:last-child {
+  margin-bottom: 0;
+}
+
 body {
   background-color: var(--col-neutral-50);
 }
