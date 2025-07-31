@@ -9,10 +9,9 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <section class="contact">
-	<div class="container">
+	<div class="container py-5">
 		<div class="row g-5">
 			<div class="col-md-6">
-				<h1>Contact Nick</h1>
 				<p>For any questions or to discuss your property needs, please call, email, or fill in the form.</p>
 				<ul class="fa-ul">
 					<li><span class="fa-li"><i class="fa-solid fa-phone"></i></span> <a href="tel:<?= esc_attr( get_field( 'contact_phone', 'option' ) ); ?>"><?= esc_html( get_field( 'contact_phone', 'option' ) ); ?></a></li>
