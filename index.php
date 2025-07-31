@@ -15,7 +15,7 @@ get_header();
 	<section class="hero">
 		<div class="container h-100">
 			<div class="row h-100">
-				<div class="col-md-6 my-auto">
+				<div class="col-md-6 my-auto pe-5 hero__content">
 					<h1 class="hero__title" data-aos="fade">News &amp; Advice</h1>
 					<p class="hero__subtitle" data-aos="fade">Insightful updates and straight-talking advice on property, deals, and strategy</p>
 				</div>

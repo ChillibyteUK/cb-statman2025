@@ -21895,10 +21895,15 @@ header .dropdown.current-menu-item > .nav-link::after {
 .hero {
   background-color: var(--col-neutral-900);
   color: var(--col-neutral-50);
-  height: calc(450px + var(--h-top));
-  min-height: calc(450px + var(--h-top));
-  padding-top: var(--h-top);
+  min-height: 450px;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  padding-top: var(--h-top);
+}
+@media (min-width: 992px) {
+  .hero {
+    height: calc(450px + var(--h-top));
+    padding-top: 0;
+  }
 }
 .hero__image-container {
   overflow: hidden;
@@ -21909,6 +21914,12 @@ header .dropdown.current-menu-item > .nav-link::after {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+.hero__content {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .hero__title {
   font-size: var(--text-2xl);
