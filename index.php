@@ -56,7 +56,7 @@ get_header();
 							<div class="latest_posts__image">
 								<?= get_the_post_thumbnail( get_the_ID(), 'medium', array( 'class' => 'img-fluid' ) ); ?>
 							</div>
-							<div class="post_meta">
+							<div class="post_meta ps-3">
 								<span><i class="fa-regular fa-calendar"></i> <?= esc_html( get_the_date( 'jS F Y' ) ); ?></span>
 								<span><i class="fa-regular fa-clock"></i> <?= esc_html( estimate_reading_time_in_minutes( get_the_content() ) ); ?> minute read</span>
 
