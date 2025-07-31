@@ -44,6 +44,35 @@ get_header();
 						</div>
 					</div>
 				</div>
+
+				<?php
+				$prev = get_previous_post();
+				$next = get_next_post();
+
+				// Determine the correct Bootstrap class for alignment.
+				if ( $prev && $next ) {
+					$justify_class = 'justify-content-between'; // Both buttons → space them apart.
+				} elseif ( $next ) {
+					$justify_class = 'justify-content-end'; // Only Next → Align right.
+				} else {
+					$justify_class = 'justify-content-start'; // Only Previous → Align left.
+				}
+				?>
+
+				<div class="post-navigation mt-4 d-flex <?= esc_attr( $justify_class ); ?>">
+					<?php
+					if ( $prev ) {
+						?>
+					<a href="<?= esc_url( get_permalink( $prev ) ); ?>" class="button button--outline">← Previous</a>
+						<?php
+					}
+					if ( $next ) {
+						?>
+					<a href="<?= esc_url( get_permalink( $next ) ); ?>" class="button button--outline">Next →</a>
+						<?php
+					}
+					?>
+				</div>
 			</div>
 			<div class="col-md-3">
 				<?php
