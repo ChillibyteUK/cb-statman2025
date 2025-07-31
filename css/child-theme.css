@@ -22138,6 +22138,10 @@ header .dropdown.current-menu-item > .nav-link::after {
   margin-bottom: 0;
 }
 
+.contact a {
+  text-decoration: none;
+}
+
 body {
   background-color: var(--col-neutral-50);
 }
