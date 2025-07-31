@@ -9,6 +9,11 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+if ( ! is_page( 'contact' ) ) {
+	// Include the contact CTA block if not on the contact page.
+	get_template_part( 'page-templates/blocks/cb-contact-cta' );
+}
 ?>
 <div id="footer-top"></div>
 <div class="pre-footer">

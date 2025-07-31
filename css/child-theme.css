@@ -21753,6 +21753,19 @@ strong,
   background-color: var(--col-accent-500);
 }
 
+.button-inverse {
+  background-color: var(--col-neutral-900);
+  color: var(--col-neutral-50);
+  transition: background-color var(--transition);
+}
+.button-inverse:hover {
+  background-color: color-mix(in srgb, var(--col-neutral-900), var(--col-accent-500) 20%);
+  color: var(--col-neutral-50);
+}
+.button-inverse:active {
+  background-color: var(--col-neutral-900);
+}
+
 .button--outline {
   background-color: transparent;
   border: 1px solid var(--col-accent-500);
