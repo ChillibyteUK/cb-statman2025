@@ -9,6 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 $title_slug = sanitize_title( get_field( 'title' ) );
 
+$level = get_field( 'level' ) ?? 'h2';
 ?>
 <section class="icon_block" id="<?= esc_attr( $title_slug ); ?>">
 	<div class="container py-5">
@@ -21,7 +22,7 @@ $title_slug = sanitize_title( get_field( 'title' ) );
 				</div>
 			</div>
 			<div class="col-md-10" data-aos="fade-left">
-				<h2 class="icon_block__title"><?= esc_html( get_field( 'title' ) ); ?></h2>
+				<<?= esc_attr( $level ); ?> class="icon_block__title"><?= esc_html( get_field( 'title' ) ); ?></<?= esc_attr( $level ); ?>>
 				<div class="icon_block__content w-constrained--sm"><?= wp_kses_post( get_field( 'content' ) ); ?></div>
 			</div>
 		</div>
