@@ -22252,6 +22252,11 @@ body {
 .blog .post_meta {
   padding-inline-start: 0;
 }
+.blog .sidebar {
+  position: sticky;
+  top: var(--h-top);
+  margin-bottom: 1rem;
+}
 .blog .sidebar__post a {
   display: block;
   background-color: white;

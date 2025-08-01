@@ -88,7 +88,7 @@ get_header();
 				);
 				if ( $q->have_posts() ) {
 					?>
-					<div class="sidebar">	
+					<div class="sidebar">
 						<h2 class="h3">Latest News &amp; Advice</h2>
 						<?php
 						while ( $q->have_posts() ) {
@@ -96,8 +96,7 @@ get_header();
 							$categories = get_the_category();
 							if ( ! empty( $categories ) && ! is_wp_error( $categories ) ) {
 								$first_category = $categories[0];
-							}
-							else {
+							} else {
 								$first_category = null;
 							}
 							?>
