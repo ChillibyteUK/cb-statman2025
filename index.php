@@ -72,7 +72,7 @@ get_header();
                 'post_type'      => 'post',
                 'post_status'    => array( 'publish', 'future' ), // Include published and scheduled posts.
                 'orderby'        => 'date',
-                'order'          => 'ASC', // Ascending order.
+                'order'          => 'DESC', // Descending order.
                 'posts_per_page' => -1,    // Get all posts.
             );
 
