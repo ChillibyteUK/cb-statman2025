@@ -21784,7 +21784,7 @@ header .navbar-toggler i {
   color: var(--col-accent-400);
 }
 header a.nav-link {
-  color: var(--col-primary-900);
+  color: var(--col-neutral-900);
   text-transform: uppercase;
   font-size: var(--fs-250);
   font-weight: var(--fw-500);
@@ -21798,7 +21798,7 @@ header a.nav-link {
   }
 }
 header .top-nav {
-  background-color: var(--col-primary-900);
+  background-color: var(--col-neutral-50);
 }
 header .logo-container {
   max-width: 240px;
@@ -21818,8 +21818,12 @@ header .logo {
 header.hide {
   transform: translateY(-78px);
 }
-header .social-icons {
+header .social-icons a {
+  transition: color var(--transition);
   color: var(--col-accent-500);
+}
+header .social-icons a:hover {
+  color: var(--col-neutral-900);
 }
 header .current_page_item > .nav-link,
 header .current_page_parent > .nav-link,
