@@ -88,14 +88,31 @@ get_header();
 				);
 				if ( $q->have_posts() ) {
 					?>
-					<div class="sidebar">	
+					<div class="sidebar">
 						<h2 class="h3">Latest News &amp; Advice</h2>
 						<?php
 						while ( $q->have_posts() ) {
 							$q->the_post();
+							$categories = get_the_category();
+							if ( ! empty( $categories ) && ! is_wp_error( $categories ) ) {
+								$first_category = $categories[0];
+							} else {
+								$first_category = null;
+							}
 							?>
 							<a class="latest_posts__item mb-4" href="<?= esc_url( get_permalink() ); ?>">
 								<div class="latest_posts__image">
+									<?php
+									if ( $first_category ) {
+										?>
+										<span class="badge"><?= esc_html( $first_category->name ); ?></span>
+										<?php
+									} else {
+										?>
+										<span class="badge">News</span>
+										<?php
+									}
+									?>
 									<?= get_the_post_thumbnail( get_the_ID(), 'large', array( 'class' => 'img-fluid' ) ); ?>
 								</div>
 								<div class="post_meta ps-4">

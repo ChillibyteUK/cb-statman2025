@@ -21729,6 +21729,10 @@ strong,
   color: #00a99d;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 .button {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -21784,7 +21788,7 @@ header .navbar-toggler i {
   color: var(--col-accent-400);
 }
 header a.nav-link {
-  color: var(--col-primary-900);
+  color: var(--col-neutral-900);
   text-transform: uppercase;
   font-size: var(--fs-250);
   font-weight: var(--fw-500);
@@ -21798,7 +21802,7 @@ header a.nav-link {
   }
 }
 header .top-nav {
-  background-color: var(--col-primary-900);
+  background-color: var(--col-neutral-50);
 }
 header .logo-container {
   max-width: 240px;
@@ -21818,8 +21822,12 @@ header .logo {
 header.hide {
   transform: translateY(-78px);
 }
-header .social-icons {
+header .social-icons a {
+  transition: color var(--transition);
   color: var(--col-accent-500);
+}
+header .social-icons a:hover {
+  color: var(--col-neutral-900);
 }
 header .current_page_item > .nav-link,
 header .current_page_parent > .nav-link,
@@ -22075,6 +22083,17 @@ header .dropdown.current-menu-item > .nav-link::after {
   width: 100%;
   overflow: hidden;
   margin-bottom: 0.5rem;
+  position: relative;
+}
+.latest_posts__image .badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+  background-color: var(--col-accent-500);
+  color: var(--col-neutral-50);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
 }
 .latest_posts__image img {
   width: 100%;
@@ -22232,6 +22251,11 @@ body {
 }
 .blog .post_meta {
   padding-inline-start: 0;
+}
+.blog .sidebar {
+  position: sticky;
+  top: var(--h-top);
+  margin-bottom: 1rem;
 }
 .blog .sidebar__post a {
   display: block;

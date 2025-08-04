@@ -131,7 +131,7 @@ if ( session_status() === PHP_SESSION_NONE ) {
 			</div>
 
 			<div class="socials d-none d-md-block">
-				<?= do_shortcode( '[social_icons class="d-flex gap-3 fs-500"]' ); ?>
+				<?= do_shortcode( '[social_icons class="d-flex gap-3 has-accent-500-color fs-500"]' ); ?>
 			</div>
 		</div>
 	</nav>
