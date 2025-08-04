@@ -48,8 +48,8 @@ if ( ! is_page( 'contact' ) ) {
             </div>
             <div class="col-sm-2 footer__contact">
                 <div class="footer-title">Contact</div>
-				<?= do_shortcode( '[contact_phone]' ); ?><br>
-				<?= do_shortcode( '[contact_email]' ); ?><br>
+				<?= do_shortcode( '[contact_phone]' ); ?>
+				<?= do_shortcode( '[contact_email]' ); ?>
             </div>
 			<div class="col-sm-3 text-center">
 				<img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/nick-statman-sig--wo.svg' ); ?>" class="mb-4" width="250" height="53">
