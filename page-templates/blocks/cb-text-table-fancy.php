@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 				if ( get_field( 'link' ) ) {
 					$l = get_field( 'link' );
 					?>
-					<a class="button button-solid align-self-end mt-4 me-0" href="<?= esc_url( $l['url'] ); ?>" target="_blank"
+					<a class="button button-solid align-self-end mt-4 me-0" href="<?= esc_url( $l['url'] ); ?>" target="<?= esc_attr( $l['target'] ); ?>" rel="<?= esc_attr( $l['rel'] ); ?>"
 					   rel="noopener noreferrer">
 						<?= esc_html( $l['title'] ); ?>
 					</a>
