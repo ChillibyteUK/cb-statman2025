@@ -22,7 +22,8 @@ defined( 'ABSPATH' ) || exit;
 					}
 					if ( get_field( 'contact_email', 'option' ) ) {
 						?>
-					<li><span class="fa-li"><i class="fa-solid fa-envelope has-accent-500-color"></i></span> <a href="mailto:<?= esc_attr( antispambot( get_field( 'contact_email', 'option' ) ) ); ?>"><?= esc_html( antispambot( get_field( 'contact_email', 'option' ) ) ); ?></a></li>
+					<li><span class="fa-li"><i class="fa-solid fa-envelope has-accent-500-color"></i></span> 
+						<a href="mailto:<?= esc_attr( antispambot( get_field( 'contact_email', 'option' ) ) ); ?>"><?= esc_html( antispambot( get_field( 'display_email', 'option' ) ) ); ?></a></li>
 						<?php
 					}
 					?>

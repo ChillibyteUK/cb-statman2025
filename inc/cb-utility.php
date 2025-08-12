@@ -55,6 +55,16 @@ add_shortcode(
 		}
 	}
 );
+
+add_shortcode(
+    'display_email',
+    function () {
+		if ( get_field( 'contact_email', 'option' ) && get_field( 'display_email', 'option' ) ) {
+			return '<a href="mailto:' . esc_attr( antispambot( get_field( 'contact_email', 'option' ) ) ) . '">' . antispambot( get_field( 'display_email', 'option' ) ) . '</a>';
+		}
+	}
+);
+
 add_shortcode(
     'contact_email_icon',
     function () {
