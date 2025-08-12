@@ -7,21 +7,32 @@
 
 defined( 'ABSPATH' ) || exit;
 
+if ( 'Fancy' === get_field( 'fanciness' ) ) {
+	$fancy = array(
+		'class'    => 'text_image_fancy__image',
+		'data-aos' => 'scale-up-bottom',
+	);
+	$fancybox = '<div class="text_image_fancy__image-box"></div>';
+} else {
+	$fancy = array(
+		'class' => 'text_image_fancy__image',
+		'data-aos' => 'fade',
+	);
+	$fancybox = '';
+}
+
 ?>
 <section class="text_image_fancy">
 	<div class="container py-5">
 		<div class="row g-5">
 			<div class="col-md-6 text-center text_image_fancy__image-container">
-				<div class="text_image_fancy__image-box"></div>
+				<?= $fancybox; ?>
 				<?=
 				wp_get_attachment_image(
 					get_field( 'image' ),
 					'full',
 					false,
-					array(
-						'class'    => 'text_image_fancy__image',
-						'data-aos' => 'scale-up-bottom',
-					)
+					$fancy
 				);
 				?>
 			</div>
