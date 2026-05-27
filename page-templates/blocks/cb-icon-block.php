@@ -29,10 +29,12 @@ $level = get_field( 'level' ) ?? 'h2';
 					$page_link = get_field( 'link' );
 					if ( is_array( $page_link ) && isset( $page_link['url'] ) && isset( $page_link['title'] ) ) {
 						?>
-						<a class="icon_block__link" href="<?= esc_url( $page_link['url'] ); ?>">
-							<?= esc_html( $page_link['title'] ); ?>
-							<i class="fa-solid fa-angle-right"></i>
-						</a>
+						<div class="text-end mt-3">
+							<a class="icon_block__link fw-bold" href="<?= esc_url( $page_link['url'] ); ?>">
+								<?= esc_html( $page_link['title'] ); ?>
+								<i class="fa-solid fa-angle-right"></i>
+							</a>
+						</div>
 						<?php
 					}
 				}
