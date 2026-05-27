@@ -15,9 +15,6 @@ defined( 'ABSPATH' ) || exit;
 			while ( have_rows( 'services' ) ) {
 				the_row();
 				$page_link = get_sub_field( 'page_link' );
-				echo '<!-- ';
-				var_dump( $page_link );
-				echo ' -->';
 				if ( is_array( $page_link ) && isset( $page_link['url'] ) ) {
 					$service_slug = $page_link['url'];
 				} else {

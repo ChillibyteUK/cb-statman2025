@@ -143,7 +143,7 @@
                             "class": "",
                             "id": ""
                         },
-                        "return_format": "url",
+                        "return_format": "array",
                         "allow_in_bindings": 0,
                         "parent_repeater": "field_688a18f50ccf9"
                     }
