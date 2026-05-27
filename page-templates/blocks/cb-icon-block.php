@@ -23,22 +23,24 @@ $level = get_field( 'level' ) ?? 'h2';
 			</div>
 			<div class="col-md-10" data-aos="fade-left">
 				<<?= esc_attr( $level ); ?> class="icon_block__title"><?= esc_html( get_field( 'title' ) ); ?></<?= esc_attr( $level ); ?>>
-				<div class="icon_block__content w-constrained--sm"><?= wp_kses_post( get_field( 'content' ) ); ?></div>
-				<?php
-				if ( get_field( 'link' ) ) {
-					$page_link = get_field( 'link' );
-					if ( is_array( $page_link ) && isset( $page_link['url'] ) && isset( $page_link['title'] ) ) {
-						?>
-						<div class="text-end mt-3">
-							<a class="icon_block__link fw-bold" href="<?= esc_url( $page_link['url'] ); ?>">
-								<?= esc_html( $page_link['title'] ); ?>
-								<i class="fa-solid fa-angle-right"></i>
-							</a>
-						</div>
-						<?php
+				<div class="icon_block__content w-constrained--sm">
+					<?= wp_kses_post( get_field( 'content' ) ); ?>
+					<?php
+					if ( get_field( 'link' ) ) {
+						$page_link = get_field( 'link' );
+						if ( is_array( $page_link ) && isset( $page_link['url'] ) && isset( $page_link['title'] ) ) {
+							?>
+							<div class="text-end mt-3">
+								<a class="icon_block__link fw-bold" href="<?= esc_url( $page_link['url'] ); ?>">
+									<?= esc_html( $page_link['title'] ); ?>
+									<i class="fa-solid fa-angle-right"></i>
+								</a>
+							</div>
+							<?php
+						}
 					}
-				}
-				?>
+					?>
+				</div>
 			</div>
 		</div>
 	</div>
