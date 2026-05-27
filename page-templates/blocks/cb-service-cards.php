@@ -14,8 +14,9 @@ defined( 'ABSPATH' ) || exit;
 			<?php
 			while ( have_rows( 'services' ) ) {
 				the_row();
-				if ( get_sub_field( 'page_link' ) ) {
-					$service_slug = get_sub_field( 'page_link' )['url'];
+				$page_link = get_sub_field( 'page_link' );
+				if ( is_array( $page_link ) && isset( $page_link['url'] ) ) {
+					$service_slug = $page_link['url'];
 				} else {
 					$service_slug = '/services/#' . sanitize_title( get_sub_field( 'service_name' ) );
 				}
